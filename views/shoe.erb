@@ -1,6 +1,13 @@
 <h1><%=@shoe.brand%></h1>
 
-<h3>Price: $<%=@shoe.price%></h3>
+<% if @shoe.price.to_s.length == 4 && @shoe.price.to_s.include?(".") && @shoe.price.to_s.length[4] == 0%>
+  <%  @price = @shoe.price.to_s.concat("0") %>
+<% else %>
+  <% @price = @shoe.price %>
+<% end%>
+
+
+<h3>Price: $<%=@price%></h3>
 
 <a href="/shoe/<%=@shoe.id%>/edit" class="btn btn-info">Edit This Shoe</a>
 <br>

@@ -20,9 +20,9 @@ describe(Shoe) do
     test_shoe = Shoe.new({:brand => "aaaaaaalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala"})
     expect(test_shoe.save).to(eq(false))
   end
-  # it("converts the price into currency") do
-  #   test_shoe = Shoe.create({:price => 45.34})
-  #   expect(test_shoe.price).to(eq("$45.34"))
-  # end
+  it("converts the price into currency") do
+    test_shoe = Shoe.create({:price => 45.0})
+    expect(test_shoe.price).to(eq("45.00"))
+  end
 
 end
