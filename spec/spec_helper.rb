@@ -12,7 +12,10 @@ require "./app"
 
 # RSpec.configure do |config|
 #   config.after(:each) do
-#     Department.all.each do |d|
+#     Shoes.all.each do |d|
+#       d.destroy
+#     end
+#     Stores.all.each do |d|
 #       d.destroy
 #     end
 #   end
