@@ -1,6 +1,6 @@
 <h1><%=@shoe.brand%></h1>
 
-<% if @shoe.price.to_s.length == 4 && @shoe.price.to_s.include?(".") && @shoe.price.to_s.length[4] == 0%>
+<% if @shoe.price.to_s.length == 4 || 5 && @shoe.price.to_s.include?(".") && @shoe.price.to_s.length[4] == 0%>
   <%  @price = @shoe.price.to_s.concat("0") %>
 <% else %>
   <% @price = @shoe.price %>

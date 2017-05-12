@@ -20,9 +20,10 @@ describe(Shoe) do
     test_shoe = Shoe.new({:brand => "aaaaaaalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalalala"})
     expect(test_shoe.save).to(eq(false))
   end
-  it("converts the price into currency") do
-    test_shoe = Shoe.create({:price => 45.0})
-    expect(test_shoe.price).to(eq("45.00"))
+  it("prevents duplicate entries") do
+    test_shoe1 = Shoe.create({:brand => "Nike"})
+    test_shoe2 = Shoe.new({:brand => "Nike"})
+    expect(test_shoe2.save).to(eq(false))
   end
 
 end

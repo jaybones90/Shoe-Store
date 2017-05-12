@@ -16,4 +16,9 @@ describe(Store) do
     test_store = Store.new({:name => "jkldfsajkladfjlkcdjklacjewijajjkldfasalweaioaejcjekwhfhdfadfjkaewl;adsldsaflkjklasdflkjanscdnawioehfalksdjklasldkfjlaksdflanewcnjalshjf;lahwelfoaih"})
     expect(test_store.save).to(eq(false))
   end
+  it("prevents duplicate entries") do
+    test_store1 = Store.create({:name => "Footlocker"})
+    test_store2 = Store.new({:name => "Footlocker"})
+    expect(test_store2.save).to(eq(false))
+  end
 end

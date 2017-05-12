@@ -1,6 +1,6 @@
 class Shoe < ActiveRecord::Base
   has_and_belongs_to_many(:stores)
-  validates(:brand, :presence => true, :length => {:maximum => 100})
+  validates(:brand, :presence => true, :length => {:maximum => 100}, :uniqueness => true)
   before_save(:capitalize_first_letter)
   after_save(:add_zero_to_price)
 
