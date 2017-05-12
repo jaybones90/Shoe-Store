@@ -1,0 +1,33 @@
+<h1><%=@store.name%></h1>
+
+
+
+
+<h3>Add Shoes To This Store From The Current Inventory:</h3>
+<form action="/<%=@store.name%>/add_shoes" method="post">
+  <ul>
+    <%@all_shoes.each do |shoe| %>
+    <li><input type="checkbox" name="shoe_ids[]" value="<%=shoe.id%>"><%=shoe.brand%></li>
+    <%end%>
+  </ul>
+  <button type="submit">Submit</button>
+</form>
+<br>
+<br>
+
+
+
+
+
+
+
+
+
+
+<a href="/store/<%=@store.id%>/edit" class="btn btn-info">Edit This Store</a>
+<br>
+<br>
+<form action="/store/<%=@store.id%>/delete" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button type="submit" class="btn btn-danger">Delete This Store</button>
+</form>

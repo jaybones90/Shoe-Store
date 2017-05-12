@@ -1,0 +1,11 @@
+<h2>Edit <%=@shoe.brand%></h2>
+
+<form action="/shoe/<%=@shoe.id%>/edit" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label for="shoe_brand">Edit The Brand For This Shoe</label>
+  <input type="text" name="shoe_brand" id="shoe_brand">
+  <br>
+  <label for="shoe_price">Edit The Price For This Shoe</label>
+  <input type="text" name="shoe_price" id="shoe_price" placeholder="$">
+  <button type="submit">Submit</button>
+</form>

@@ -1,0 +1,11 @@
+<h1><%=@shoe.brand%></h1>
+
+<h3>Price: $<%=@shoe.price%></h3>
+
+<a href="/shoe/<%=@shoe.id%>/edit" class="btn btn-info">Edit This Shoe</a>
+<br>
+<br>
+<form action="/shoe/<%=@shoe.id%>/delete" method="post">
+  <input type="hidden" name="_method" value="delete">
+  <button type="submit" class="btn btn-danger">Delete This Shoe</button>
+</form>

@@ -1,0 +1,22 @@
+<h1>Shoes</h1>
+
+
+<a href="/shoe/add" class="btn btn-info">Add A New Shoe</a>
+<br>
+<br>
+
+
+<table>
+  <tr>
+    <th>Shoe Brand</th>
+  </tr>
+  <tr>
+  <% if @all_shoes.any? %>
+    <% @all_shoes.each do |shoe| %>
+      <td><a href="/shoe/<%=shoe.id%>"><%=shoe.brand%></a></td>
+  </tr>
+  <% end %>
+</table>
+<% else %>
+  <h5>No shoes have been entered yet.</h5>
+<% end %>
