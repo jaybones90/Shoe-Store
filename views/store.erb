@@ -1,10 +1,25 @@
 <h1><%=@store.name%></h1>
 
+<h3>These Are All The Shoes That <%=@store.name%> Has In Stock:</h3>
+
+<table>
+  <% @store.shoes.each do |shoe| %>
+  <tr>
+    <td><a href="/shoe/<%=shoe.id%>"><%=shoe.brand%></a></td>
+  </tr>
+  <% end %>
+</table>
+
+
+
+
+
+
 
 
 
 <h3>Add Shoes To This Store From The Current Inventory:</h3>
-<form action="/<%=@store.name%>/add_shoes" method="post">
+<form action="/store/<%=@store.id%>/add_shoes" method="post">
   <ul>
     <%@all_shoes.each do |shoe| %>
     <li><input type="checkbox" name="shoe_ids[]" value="<%=shoe.id%>"><%=shoe.brand%></li>

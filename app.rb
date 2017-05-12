@@ -47,6 +47,15 @@ delete ("/store/:id/delete") do
   redirect("/")
 end
 
+post ("/store/:id/add_shoes") do
+  store = Store.find(params['id'].to_i)
+  shoe_ids = params['shoe_ids']
+  shoe_ids.each do |id|
+  store.shoes.push(Shoe.find(id))
+  end
+  redirect ("/store/#{store.id}")
+end
+
 ############################# SHOES #####################
 
 get ("/shoes") do
