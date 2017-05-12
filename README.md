@@ -1,18 +1,21 @@
-# <!--PROJECT NAME HERE-->
+# Shoe Store
 
-<!--PROJECT DESCRIPTION HERE-->
+This is a simple web application to allow the user to create new stores and a new shoes, while being able to update and delete all data related to shoes and stores. It also allows the user to add shoes to a specific store and will display back to the user, which shoes belong to a specific store.
 
 ### Prerequisites
 
 Web browser with ES6 compatibility
 Examples: Chrome, Safari
 
-Ruby <!--VERSION HERE-->
+Ruby 2.2.2
 Bundler
 
 ### Installing
 
-Installation is quick and easy! First you can open this link <!--HEROKU LINK HERE--> to see the webpage in action live online. Or you can clone this repository to your machine, navigate to the file path in your terminal, and run 'app.rb' by typing '$ruby app.rb'. If you chose to clone the repository, after you run 'app.rb' you will need to copy the localhost path into your web browser. The standard localhost for Sinatra is port 4567
+
+Clone the repo to your local machine and then access your terminal to run the command 'rake db:create' which will create the databases and then run the command 'rake db:migrate' to run the migrations that will build the tables in the database. If you'd like to be able to run all the spec tests, then you'll need to run the command 'rake db:test:prepare'.
+
+You can view the webpage live if you run the command 'ruby app.rb' and then copy the localhost path into your web browser. The standard localhost for Sinatra is port 4567.
 
 ## Built With
 
@@ -22,17 +25,17 @@ Installation is quick and easy! First you can open this link <!--HEROKU LINK HER
 * CSS
 * Bootstrap https://getbootstrap.com/
 * ES6
-* Jquery https://jquery.com/
+
 
 ## Authors
 
-* <!--YOUR NAME HERE-->
+* Jason Ainsworth
 
 ## License
 
 MIT License
 
-Copyright (c) <!--YOUR NAME & YEAR HERE-->
+Copyright (c) Jason Ainsworth 2017
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -51,4 +54,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
