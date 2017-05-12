@@ -1,4 +1,4 @@
-require "spec_helper"
+# require "spec_helper"
 
 # describe("the phrase parser path", {:type => :feature}) do
 #   it("processes the user input and returns correct message if its a palindrome") do
