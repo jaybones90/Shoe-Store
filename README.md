@@ -1,6 +1,6 @@
 # Shoe Store
 
-This is a simple web application to allow the user to create new stores and a new shoes, while being able to update and delete all data related to shoes and stores. It also allows the user to add shoes to a specific store and will display back to the user, which shoes belong to a specific store.
+This is a simple web application which allows the user to create new stores and a new shoes, while being able to update and delete all data related to shoes and stores. It has sections to view all stores and all shoes, and the specific shoe page will display the price and brand of the shoe. It also allows the user to add shoes to a specific store and will display back to the user which shoes belong to a specific store.
 
 ### Prerequisites
 
